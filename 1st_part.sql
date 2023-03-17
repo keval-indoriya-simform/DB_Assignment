@@ -1,0 +1,3 @@
+SELECT O.OrderID, U.FirstName, U.LastName, P.ProductName, O.OrderDate, O.OrderStatus, O.OrderexpectedDeliveryDate FROM Users U, Orders O, Products P, Order_details OD WHERE O.UserID = U.UserID AND O.OrderID = OD.OrderID AND OD.ProductID = P.ProductID ORDER BY O.OrderID, O.OrderDate;
+
+SELECT O.OrderID, U.FirstName, U.LastName, P.ProductName, O.OrderDate, O.OrderStatus, O.OrderexpectedDeliveryDate FROM Orders O INNER JOIN Users U ON O.UserID = U.UserID INNER JOIN Order_details OD ON O.OrderID = OD.OrderID INNER JOIN Products P ON OD.ProductID = P.ProductID;
