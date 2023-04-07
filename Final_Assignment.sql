@@ -1,3 +1,6 @@
+-- drop database if exsist
+DROP DATABASE IF EXISTS DB_Assignment;
+
 -- Create database called DB_Assignment
 CREATE DATABASE DB_Assignment;
 
